@@ -1,4 +1,5 @@
 import requests
+from termcolor import colored
 
 def iplocator():
     ip = raw_input('IP: ')
@@ -7,5 +8,5 @@ def iplocator():
     sl = r.text
     dct = eval(sl)
     for i in dct:
-        print(i, '-', dct[i])
+        print colored((i, '-', dct[i]),"yellow")
 iplocator()
